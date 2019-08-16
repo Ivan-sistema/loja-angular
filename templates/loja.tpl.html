@@ -1,0 +1,14 @@
+
+<div class="container-prod">
+   
+    <div class="box-prod" ng-repeat="(key, produto) in produtos" ng-click="addShoppingCart(produto)">
+        <div class="box-prod-img"><img src='/assets/img/guide.jpg'></div>
+        <div class="box-prod-title" >{{produto.title}}</div>
+        <div class="box-prod-desc"><span class="box-prod-desc-ye">-</span></div>
+        <div class="box-prod-price">R$ {{produto.price + ',00'}}</div>
+        <div class="box-prod-price price-cinza">ou 3 x de R$ {{produto.price / 3}}</div>
+        <div class="clear"></div>
+   
+    </div>
+</div>
+

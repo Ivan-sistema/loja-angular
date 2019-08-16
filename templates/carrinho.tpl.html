@@ -1,0 +1,21 @@
+<div class="box-table">
+    <div class="box-table-line">
+        <div class="box-table-item">Código: </div>
+        <div class="box-table-item">Nome: </div>
+        <div class="box-table-item">Preço</div>
+    </div>
+
+    <div class="box-title smooth" ng-show="carrinho.length < 1">Não há itens no carrinho!</div>
+
+    <div class="box-table-line" ng-repeat="(key, produto) in carrinho" ng-class="{selected: produto.selected}" >
+        <div class="box-table-item"> <input type="checkbox" ng-model="produto.selected">{{produto.selected}}  {{produto.id}} </div>
+        <div class="box-table-item">{{produto.title}} </div>
+        <div class="box-table-item">R$ {{produto.price}}</div>
+    </div>
+
+    <div class="box-title">Total: <span class="pull-right">R$ {{total}}</span></div>
+    <div class="box-table-line"> 
+        <a href="/" class="btn btn-back"><i class="fa fa-mail-reply"></i> Voltar</a>
+        <button class="box-table-button" ng-click="removeProdutos()"><i class="fa fa-remove"></i> Remover</button>
+    </div>
+</div>
